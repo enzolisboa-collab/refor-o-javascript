@@ -19,16 +19,27 @@
 // Crie 2 variáveis com números e mostre no console
 // o resultado da soma, subtração, multiplicação e divisão.
 // ------------------------------------------------------------
-
-
-
+let num1 = Number (1)
+let num2 = Number (1)
+let soma = num1+num2
+let subtração = num1-num2
+let divisão = num1/num2
+let multiplicação = num1*num2
+console.log("exercicio 1:")
+console.log(soma)
+console.log(subtração)
+console.log(divisão)
+console.log(multiplicação)
 
 // EXERCÍCIO 2 - Conversor de temperatura
 // Crie uma variável com um valor em Celsius.
 // Converta para Fahrenheit e mostre no console.
 // Fórmula: F = C * 9/5 + 32
 // ------------------------------------------------------------
-
+let Celsius = Number(35)
+let formula =Celsius*9/5+32
+console.log("exercicio 2:")
+console.log(formula)
 
 
 
@@ -38,7 +49,13 @@
 // Dica: use o operador % (resto da divisão)
 // Se numero % 2 === 0, é par.
 // ------------------------------------------------------------
-
+let num =Number(2)
+console.log("exercicio 3:")
+if(num%2===0){
+    console.log("par")
+}else{
+    console.log("impar")
+}
 
 
 
