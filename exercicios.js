@@ -14,7 +14,6 @@
 //  BLOCO 1 - VARIÁVEIS, TIPOS E OPERADORES
 // ============================================================
 
-
 // EXERCÍCIO 1 - Calculadora simples
 // Crie 2 variáveis com números e mostre no console
 // o resultado da soma, subtração, multiplicação e divisão.
@@ -55,7 +54,6 @@ if(num%2===0){
     console.log("par")
 }else{
     console.log("impar")}
-
 // EXERCÍCIO 4 - Média de notas
 // Crie 3 variáveis com notas (de 0 a 10).
 // Calcule a média e mostre no console.
@@ -74,25 +72,21 @@ if(media>=7){
 }else{
     console.log("reprovado")
 }
-
 // ============================================================
 //  BLOCO 2 - CONDICIONAIS (if/else, switch)
 // ============================================================
-
-
 // EXERCÍCIO 5 - Maior de idade
 // Crie uma variável com uma idade.
 // Se for >= 18, mostre "Maior de idade".
 // Se não, mostre "Menor de idade".
 // ------------------------------------------------------------
-let idade = Number(19)
+let idade = 19
 console.log("exercicio5:")
 if(idade >=18){
     console.log("Maior de Idade")
 }else{
     console.log("Menor de Idade")
 }
-
 // EXERCÍCIO 6 - Calculadora de IMC
 // Crie variáveis para peso (em kg) e altura (em metros).
 // Calcule o IMC: peso / (altura * altura)
@@ -102,9 +96,19 @@ if(idade >=18){
 //   25 até 29.9    = "Sobrepeso"
 //   30 ou mais     = "Obesidade"
 // ------------------------------------------------------------
-
-
-
+let peso = Number(65)
+let altura = Number(1.75)
+let IMC =peso / (altura*altura)
+console.log("atividade 6:")
+if(IMC <= 18.5){
+    console.log("abaixo do peso")
+}else if(IMC <=24.9){
+    console.log("peso normal")
+}else if(IMC<=29.9){
+    console.log("sobre peso")
+}else{
+    console.log("obesidade")
+}
 
 // EXERCÍCIO 7 - Pedra, papel e tesoura
 // Crie uma variável com sua jogada ("pedra", "papel" ou "tesoura").
