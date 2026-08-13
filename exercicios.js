@@ -54,10 +54,7 @@ console.log("exercicio 3:")
 if(num%2===0){
     console.log("par")
 }else{
-    console.log("impar")
-}
-
-
+    console.log("impar")}
 
 // EXERCÍCIO 4 - Média de notas
 // Crie 3 variáveis com notas (de 0 a 10).
@@ -65,9 +62,18 @@ if(num%2===0){
 // Se a média for >= 7, mostre "Aprovado".
 // Se não, mostre "Reprovado".
 // ------------------------------------------------------------
-
-
-
+const notas = [6,7,8]
+let somas = 0
+console.log("exercicio 3:")
+for(let i =0;i <notas.length;i++){
+    somas=somas+notas[i]
+    media =somas/3
+}
+if(media>=7){
+    console.log("aprovado")
+}else{
+    console.log("reprovado")
+}
 
 // ============================================================
 //  BLOCO 2 - CONDICIONAIS (if/else, switch)
@@ -79,9 +85,13 @@ if(num%2===0){
 // Se for >= 18, mostre "Maior de idade".
 // Se não, mostre "Menor de idade".
 // ------------------------------------------------------------
-
-
-
+let idade = Number(19)
+console.log("exercicio5:")
+if(idade >=18){
+    console.log("Maior de Idade")
+}else{
+    console.log("Menor de Idade")
+}
 
 // EXERCÍCIO 6 - Calculadora de IMC
 // Crie variáveis para peso (em kg) e altura (em metros).
