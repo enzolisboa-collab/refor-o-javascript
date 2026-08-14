@@ -118,6 +118,20 @@ if(IMC <= 18.5){
 //   let computador = opcoes[Math.floor(Math.random() * 3)]
 // Compare as jogadas e mostre quem ganhou.
 // ------------------------------------------------------------
+let opcoes = ['pedra', 'papel', 'tesoura']
+let jogada = ("papel")
+console.log("exercicio 7:")
+let computador = opcoes[Math.floor(Math.random() * 3)]
+if(jogada === computador){
+    console.log("empate")
+}else if(
+(usuario === "pedra" && computador === "tesoura")
+(usuario === "papel" && computador === "pedra") ||
+(usuario === "tesoura" && computador === "papel")
+)
+{
+console.log("voce ganhou")
+}else{console.log("voce perdeu")}
 
 
 
