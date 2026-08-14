@@ -124,17 +124,15 @@ console.log("exercicio 7:")
 let computador = opcoes[Math.floor(Math.random() * 3)]
 if(jogada === computador){
     console.log("empate")
-}else if(
-(usuario === "pedra" && computador === "tesoura")
-(usuario === "papel" && computador === "pedra") ||
-(usuario === "tesoura" && computador === "papel")
+}
+if(
+(jogada === "pedra" && computador === "tesoura")||
+(jogada === "papel" && computador === "pedra") ||
+(jogada === "tesoura" && computador === "papel")
 )
 {
 console.log("voce ganhou")
 }else{console.log("voce perdeu")}
-
-
-
 
 // EXERCÍCIO 8 - Sistema de notas
 // Crie uma variável com uma nota de 0 a 10.
@@ -145,7 +143,18 @@ console.log("voce ganhou")
 //   4 e 3    = "D"
 //   2, 1, 0  = "F"
 // ------------------------------------------------------------
-
+let nota = Number(1)
+if(nota ===10 ||nota ===9){
+    console.log("A")
+}else if(nota ===8 ||nota ===7){
+    console.log("B")
+}else if(nota ===6 ||nota ===5){
+    console.log("C")
+}else if(nota ==4 || nota ===3){
+    console.log("D")
+}else if(nota ===2 ||nota ===1||nota ===0){
+    console.log("F")
+}
 
 
 
