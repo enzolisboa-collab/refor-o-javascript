@@ -144,6 +144,7 @@ console.log("voce ganhou")
 //   2, 1, 0  = "F"
 // ------------------------------------------------------------
 let nota = Number(1)
+console.log("atividade 8")
 if(nota ===10 ||nota ===9){
     console.log("A")
 }else if(nota ===8 ||nota ===7){
@@ -155,9 +156,6 @@ if(nota ===10 ||nota ===9){
 }else if(nota ===2 ||nota ===1||nota ===0){
     console.log("F")
 }
-
-
-
 // ============================================================
 //  BLOCO 3 - LOOPS (for, while)
 // ============================================================
@@ -171,17 +169,21 @@ if(nota ===10 ||nota ===9){
 //   "5 x 2 = 10"
 //   ... até "5 x 10 = 50"
 // ------------------------------------------------------------
-
-
-
-
+console.log("ATIVIDADE 9:")
+let num3 = 7
+for(let i = 0; i <1 ;i++){
+    console.log(num3 + "X" + i + "=" + num3 * i)
+}
 // EXERCÍCIO 10 - Contagem regressiva
 // Use um for para contar de 10 até 0.
 // Mostre cada número no console.
 // No final, mostre "Feliz Ano Novo!" (ou qualquer mensagem).
 // ------------------------------------------------------------
-
-
+console.log("atividade 10:")
+for (let i = 10; i >= 0; i--) {
+    console.log(i);
+  }
+  console.log("Feliz Ano Novo! 🎉");
 
 
 // EXERCÍCIO 11 - Somar números
@@ -190,7 +192,13 @@ if(nota ===10 ||nota ===9){
 // Mostre o resultado no console.
 // Exemplo: se N = 5, resultado = 1+2+3+4+5 = 15
 // ------------------------------------------------------------
-
+console.log("atividade 11:")
+const N = 5;
+let soma1 = 0;
+for (let i = 1; i <= N; i++) {
+  soma1 += i;
+}
+console.log(`A soma de 1 até ${N} é: ${soma1}`);
 
 
 
