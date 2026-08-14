@@ -210,9 +210,18 @@ console.log(`A soma de 1 até ${N} é: ${soma1}`);
 // Quando acertar, mostre "Parabéns! Acertou!"
 // Dica: use prompt() para pedir o palpite do usuário.
 // ------------------------------------------------------------
-
-
-
+let secreto = Math.floor(Math.random() * 10) + 1
+let chute = 5
+do{
+    if(chute <secreto){
+        console.log("menos")
+    }else if(chute > secreto){
+        console.log("maior")
+    }else if(chute ===secreto){
+    console.log("boaaaaa")
+    }
+}while(chute=!secreto)
+console.log("parabens voce acertou")
 
 // ============================================================
 //  BLOCO 4 - FUNÇÕES
