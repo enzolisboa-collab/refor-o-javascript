@@ -270,9 +270,11 @@ ehPrimo(2)
 // Dica: use split('') para virar array, reverse() para
 // inverter, e join('') para voltar a ser string.
 // ------------------------------------------------------------
-
-
-
+console.log("exercicio 15")
+function inverter(texto){
+  return texto.split('').reverse().join('')
+}
+console.log(inverter("javascript"))
 
 // EXERCÍCIO 16 - Contar vogais
 // Crie uma função chamada "contarVogais" que recebe uma
@@ -281,9 +283,21 @@ ehPrimo(2)
 // Dica: transforme em minúscula com .toLowerCase()
 // e verifique cada letra com um for.
 // ------------------------------------------------------------
+console.log("exercicio 16")
+function contarVogais(texto) {
+    texto = texto.toLowerCase();
+    let soma = 0;
+    let vogais = "aeiou";
 
+    for (let i = 0; i < texto.length; i++) {
+        if (vogais.includes(texto[i])) {
+            soma++;
+        }
+    }
 
-
+    return soma;
+}
+console.log(contarVogais("mano"))
 
 // ============================================================
 //  BLOCO 5 - ARRAYS
@@ -296,8 +310,12 @@ ehPrimo(2)
 // Mostre a lista no console.
 // Remova o último item com pop() e mostre a lista novamente.
 // ------------------------------------------------------------
-
-
+const listaCompras =[]
+console.log("exercicio 17")
+listaCompras.push("manga","mamao","leite","frango","prato")
+console.log(listaCompras)
+listaCompras.pop()
+console.log(listaCompras)
 
 
 // EXERCÍCIO 18 - Maior e menor
