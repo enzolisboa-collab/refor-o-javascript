@@ -235,6 +235,7 @@ console.log("parabens voce acertou")
 // Chame a função e mostre o resultado no console.
 // Exemplo: saudacao("Maria") retorna "Olá, Maria!"
 // ------------------------------------------------------------
+console.log("exercicio 13")
 function saudação(nome){
     return `ola,${nome}`
 }
@@ -249,7 +250,16 @@ console.log(saudação("maria"))
 // Dica: use um for de 2 até numero-1 e verifique se
 // algum divide o número sem resto (numero % i === 0).
 // ------------------------------------------------------------
+console.log("axercicio 14")
+function ehPrimo(n1){
+    if(n1%2===0){
+        console.log("e par")
+    }else{
+        console.log("e impar")
+    }
 
+}
+ehPrimo(2)
 
 
 
