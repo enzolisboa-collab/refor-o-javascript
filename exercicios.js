@@ -325,8 +325,15 @@ console.log(listaCompras)
 // Dica: use Math.max(...array) e Math.min(...array)
 // Ou tente fazer com um for (mais desafiador!).
 // ------------------------------------------------------------
+console.log("exercicio 18")
+let numeros = [15, 42, 3, 88, 12, 9, 64, 27];
 
+let maior = Math.max(...numeros);
+let menor = Math.min(...numeros);
 
+console.log(`Array: ${numeros}`);
+console.log(`Maior número: ${maior}`);
+console.log(`Menor número: ${menor}`);
 
 
 // EXERCÍCIO 19 - Ordenar nomes
