@@ -211,14 +211,15 @@ console.log(`A soma de 1 até ${N} é: ${soma1}`);
 // Dica: use prompt() para pedir o palpite do usuário.
 // ------------------------------------------------------------
 let secreto = Math.floor(Math.random() * 10) + 1
-let chute = 5
+let chute = 6
+console.log("exercicio 12")
 do{
     if(chute <secreto){
         console.log("menos")
     }else if(chute > secreto){
         console.log("maior")
     }else if(chute ===secreto){
-    console.log("boaaaaa")
+    
     }
 }while(chute=!secreto)
 console.log("parabens voce acertou")
