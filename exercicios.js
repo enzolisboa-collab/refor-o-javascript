@@ -342,7 +342,11 @@ console.log(`Menor número: ${menor}`);
 // Depois ordene ao contrário (Z até A) e mostre também.
 // Dica: use .sort() e .reverse()
 // ------------------------------------------------------------
-
+console.log("exercicio 19")
+const pessoas = ["Ana","Beatriz","Carlos","Simone","Victor","Paulo"]
+pessoas.sort()
+pessoas.reverse()
+console.log(pessoas)
 
 
 
