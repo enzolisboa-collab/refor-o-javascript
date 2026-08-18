@@ -348,15 +348,16 @@ pessoas.sort()
 pessoas.reverse()
 console.log(pessoas)
 
-
-
 // EXERCÍCIO 20 - Filtrar pares
 // Crie um array com os números de 1 a 20.
 // Filtre apenas os números pares e guarde num novo array.
 // Mostre o array de pares no console.
 // Dica: use .filter(function(numero) { return numero % 2 === 0 })
 // ------------------------------------------------------------
-
+console.log("exercicio 20")
+const numm = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+const pares = []
+console.log(numm.filter(function(numero) { return numero % 2 === 0 }))
 
 
 
