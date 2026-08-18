@@ -396,8 +396,19 @@ btnVerde.addEventListener('click', function() {
 // Dica: use uma variável para guardar o valor do contador
 // e atualize o textContent do <h1> a cada clique.
 // ------------------------------------------------------------
+const contador = document.getElementById("contador")
+const btnSubtrair =document.getElementById("btnSubtrair")
+const btnSomar =document.getElementById("btnSomar")
+let valorContador=0
 
-
+btnSomar.addEventListener('click',function(){
+    valorContador++
+    contador.textContent= valorContador;
+})
+btnSubtrair.addEventListener('click',function(){
+    valorContador--
+    contador.textContent = valorContador
+})
 
 
 // EXERCÍCIO 23 - Mostrar e esconder
