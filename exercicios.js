@@ -356,7 +356,6 @@ console.log(pessoas)
 // ------------------------------------------------------------
 console.log("exercicio 20")
 const numm = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-const pares = []
 console.log(numm.filter(function(numero) { return numero % 2 === 0 }))
 
 
@@ -375,10 +374,21 @@ console.log(numm.filter(function(numero) { return numero % 2 === 0 }))
 // Ao clicar em cada botão, mudar a cor de fundo da página.
 // Dica: document.body.style.backgroundColor = 'red'
 // ------------------------------------------------------------
+const btnVermelho = document.getElementById('btnVermelho');
+const btnAzul = document.getElementById('btnAzul');
+const btnVerde = document.getElementById('btnVerde');
 
+btnVermelho.addEventListener('click', function() {
+    document.body.style.backgroundColor = 'red';
+});
 
+btnAzul.addEventListener('click', function() {
+    document.body.style.backgroundColor = 'blue';
+});
 
-
+btnVerde.addEventListener('click', function() {
+    document.body.style.backgroundColor = 'green';
+});
 // EXERCÍCIO 22 - Contador
 // Crie no HTML: um <h1> com o número 0, e dois botões (+ e -).
 // Ao clicar em "+", o número aumenta 1.
