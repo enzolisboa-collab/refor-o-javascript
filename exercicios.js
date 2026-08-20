@@ -444,7 +444,51 @@ btnToggle.addEventListener('click', () => {
 // O cronômetro deve contar segundos e minutos.
 // Dica: use setInterval() para contar e clearInterval() para pausar.
 // ------------------------------------------------------------
+// EXERCÍCIO 25 - Cronômetro
+const displayCronometro = document.getElementById('displayCronometro');
+const btnIniciar = document.getElementById('btnIniciarCronometro');
+const btnPausar = document.getElementById('btnPausarCronometro');
+const btnResetar = document.getElementById('btnResetarCronometro');
 
+let segundos = 0;
+let intervalo = null;
+
+// Função para formatar o tempo em 00:00
+function formatarTempo(totalSegundos) {
+    const mins = Math.floor(totalSegundos / 60);
+    const segs = totalSegundos % 60;
+
+    // String(n).padStart(2, '0') garante 2 dígitos (ex: "05" em vez de "5")
+    const minsFormatado = String(mins).padStart(2, '0');
+    const segsFormatado = String(segs).padStart(2, '0');
+
+    return `${minsFormatado}:${segsFormatado}`;
+}
+
+// Evento Iniciar
+btnIniciar.addEventListener('click', () => {
+    // Evita criar múltiplos intervalos se clicar várias vezes em "Iniciar"
+    if (intervalo === null) {
+        intervalo = setInterval(() => {
+            segundos++;
+            displayCronometro.textContent = formatarTempo(segundos);
+        }, 1000);
+    }
+});
+
+// Evento Pausar
+btnPausar.addEventListener('click', () => {
+    clearInterval(intervalo);
+    intervalo = null; // Libera a variável para permitir iniciar novamente
+});
+
+// Evento Resetar
+btnResetar.addEventListener('click', () => {
+    clearInterval(intervalo);
+    intervalo = null;
+    segundos = 0;
+    displayCronometro.textContent = '00:00';
+});
 
 
 
@@ -455,7 +499,53 @@ btnToggle.addEventListener('click', () => {
 // Dica: guarde as perguntas num array de objetos:
 //   { pergunta: "...", opcoes: ["a", "b", "c"], correta: 1 }
 // ------------------------------------------------------------
+const perguntas = [
+    { pergunta: "Qual é a capital do Brasil?", opcoes: ["São Paulo", "Brasília", "Rio de Janeiro"], correta: 1 },
+    { pergunta: "Quanto é 2 + 2?", opcoes: ["3", "4", "5"], correta: 1 },
+    { pergunta: "Qual linguagem roda nos navegadores?", opcoes: ["JavaScript", "Python", "C++"], correta: 0 },
+    { pergunta: "Qual é a cor do céu em um dia limpo?", opcoes: ["Verde", "Azul", "Amarelo"], correta: 1 },
+    { pergunta: "Quantos dias tem um ano bissexto?", opcoes: ["365", "366", "367"], correta: 1 }
+];
 
+let indicePerguntaAtual = 0;
+let pontuacao = 0;
+
+const perguntaQuiz = document.getElementById('perguntaQuiz');
+const opcoesQuiz = document.getElementById('opcoesQuiz');
+const resultadoQuiz = document.getElementById('resultadoQuiz');
+
+function carregarPergunta() {
+    if (indicePerguntaAtual >= perguntas.length) {
+        // Fim do quiz
+        perguntaQuiz.textContent = "Quiz Concluído!";
+        opcoesQuiz.innerHTML = "";
+        resultadoQuiz.textContent = `Você acertou ${pontuacao} de ${perguntas.length}!`;
+        return;
+    }
+
+    const q = perguntas[indicePerguntaAtual];
+    perguntaQuiz.textContent = `${indicePerguntaAtual + 1}. ${q.pergunta}`;
+    opcoesQuiz.innerHTML = "";
+
+    q.opcoes.forEach((opcao, index) => {
+        const btn = document.createElement('button');
+        btn.textContent = opcao;
+        btn.style.margin = "5px";
+        btn.addEventListener('click', () => verificarResposta(index));
+        opcoesQuiz.appendChild(btn);
+    });
+}
+
+function verificarResposta(indexSelecionado) {
+    if (indexSelecionado === perguntas[indicePerguntaAtual].correta) {
+        pontuacao++;
+    }
+    indicePerguntaAtual++;
+    carregarPergunta();
+}
+
+// Inicia o quiz ao carregar o script
+carregarPergunta();
 
 
 
@@ -467,7 +557,35 @@ btnToggle.addEventListener('click', () => {
 // Dica: crie uma string com os caracteres possíveis e use
 // Math.random() para escolher caracteres aleatórios.
 // ------------------------------------------------------------
+const tamanhoSenha = document.getElementById('tamanhoSenha');
+const chkMaiusculas = document.getElementById('chkMaiusculas');
+const chkNumeros = document.getElementById('chkNumeros');
+const chkSimbolos = document.getElementById('chkSimbolos');
+const btnGerarSenha = document.getElementById('btnGerarSenha');
+const resultadoSenha = document.getElementById('resultadoSenha');
 
+btnGerarSenha.addEventListener('click', () => {
+    const minusculas = "abcdefghijklmnopqrstuvwxyz";
+    const maiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const numeros = "0123456789";
+    const simbolos = "!@#$%^&*()_+-=[]{}|;:,.<>?";
+
+    let caracteresPossiveis = minusculas;
+
+    if (chkMaiusculas.checked) caracteresPossiveis += maiusculas;
+    if (chkNumeros.checked) caracteresPossiveis += numeros;
+    if (chkSimbolos.checked) caracteresPossiveis += simbolos;
+
+    const tamanho = parseInt(tamanhoSenha.value) || 8;
+    let senhaGerada = "";
+
+    for (let i = 0; i < tamanho; i++) {
+        const indiceAleatorio = Math.floor(Math.random() * caracteresPossiveis.length);
+        senhaGerada += caracteresPossiveis[indiceAleatorio];
+    }
+
+    resultadoSenha.textContent = senhaGerada;
+});
 
 
 
@@ -477,5 +595,35 @@ btnToggle.addEventListener('click', () => {
 // Ao clicar nos botões, trocar a imagem mostrada.
 // Dica: mude o atributo src da <img> com JavaScript.
 // ------------------------------------------------------------
+const imagens = [
+    "https://picsum.photos/id/10/400/250",
+    "https://picsum.photos/id/20/400/250",
+    "https://picsum.photos/id/30/400/250",
+    "https://picsum.photos/id/40/400/250"
+];
 
+let indiceImagemAtual = 0;
+
+const imagemGaleria = document.getElementById('imagemGaleria');
+const btnAnteriorImg = document.getElementById('btnAnteriorImg');
+const btnProximaImg = document.getElementById('btnProximaImg');
+
+// Define a imagem inicial
+imagemGaleria.src = imagens[indiceImagemAtual];
+
+btnAnteriorImg.addEventListener('click', () => {
+    indiceImagemAtual--;
+    if (indiceImagemAtual < 0) {
+        indiceImagemAtual = imagens.length - 1; // Volta para a última se estiver no início
+    }
+    imagemGaleria.src = imagens[indiceImagemAtual];
+});
+
+btnProximaImg.addEventListener('click', () => {
+    indiceImagemAtual++;
+    if (indiceImagemAtual >= imagens.length) {
+        indiceImagemAtual = 0; // Volta para a primeira se chegar ao fim
+    }
+    imagemGaleria.src = imagens[indiceImagemAtual];
+});
 
