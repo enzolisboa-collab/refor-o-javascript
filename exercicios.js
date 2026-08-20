@@ -418,8 +418,13 @@ btnSubtrair.addEventListener('click',function(){
 // Dica: use classList.toggle() com uma classe CSS que tenha
 // display: none
 // ------------------------------------------------------------
+// EXERCÍCIO 23
+const btnToggle = document.getElementById('btnToggle');
+const mensagemToggle = document.getElementById('mensagemToggle');
 
-
+btnToggle.addEventListener('click', () => {
+    mensagemToggle.classList.toggle('escondido');
+});
 
 
 // EXERCÍCIO 24 - Lista de tarefas

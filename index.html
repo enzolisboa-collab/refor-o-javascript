@@ -1,20 +1,80 @@
+<!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>atividadeJS</title>
-    </head>
-    <body>
-        <button id="btnVermelho">Vermelho</button>
-        <button id="btnAzul">Azul</button>
-        <button id="btnVerde">Verde</button>
-    
-        <hr>
-    
-        <h1 id="contador">0</h1>
-        <button id="btnSubtrair">-</button>
-        <button id="btnSomar">+</button>
-    
-        <script src="exercicios.js"></script>
-    </body>
-    </html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividadeJS</title>
+    <style>
+        /* Classe necessária para o Exercício 23 */
+        .escondido {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Exercícios Anteriores -->
+    <button id="btnVermelho">Vermelho</button>
+    <button id="btnAzul">Azul</button>
+    <button id="btnVerde">Verde</button>
+
+    <hr>
+
+    <h1 id="contador">0</h1>
+    <button id="btnSubtrair">-</button>
+    <button id="btnSomar">+</button>
+
+    <hr>
+
+    <!-- EXERCÍCIO 23 - Mostrar e Esconder -->
+    <h2>Exercício 23 - Mostrar/Esconder</h2>
+    <button id="btnToggle">Mostrar/Esconder</button>
+    <div id="mensagemToggle">Este é um texto que pode ser escondido ou exibido!</div>
+
+    <hr>
+
+    <!-- EXERCÍCIO 25 - Cronômetro -->
+    <h2>Exercício 25 - Cronômetro</h2>
+    <h1 id="displayCronometro">00:00</h1>
+    <button id="btnIniciarCronometro">Iniciar</button>
+    <button id="btnPausarCronometro">Pausar</button>
+    <button id="btnResetarCronometro">Resetar</button>
+
+    <hr>
+
+    <!-- EXERCÍCIO 26 - Quiz de Perguntas -->
+    <h2>Exercício 26 - Quiz</h2>
+    <div id="containerQuiz">
+        <h3 id="perguntaQuiz">Sua pergunta vai aparecer aqui</h3>
+        <div id="opcoesQuiz">
+            <!-- As opções podem ser inseridas via JS ou estilizadas aqui -->
+        </div>
+    </div>
+    <div id="resultadoQuiz"></div>
+
+    <hr>
+
+    <!-- EXERCÍCIO 27 - Gerador de Senha -->
+    <h2>Exercício 27 - Gerador de Senhas</h2>
+    <label for="tamanhoSenha">Tamanho da senha:</label>
+    <input type="number" id="tamanhoSenha" value="8" min="4" max="32">
+    <br><br>
+    <label><input type="checkbox" id="chkMaiusculas"> Incluir Maiúsculas</label><br>
+    <label><input type="checkbox" id="chkNumeros"> Incluir Números</label><br>
+    <label><input type="checkbox" id="chkSimbolos"> Incluir Símbolos</label><br><br>
+    <button id="btnGerarSenha">Gerar</button>
+    <p>Senha gerada: <strong id="resultadoSenha">---</strong></p>
+
+    <hr>
+
+    <!-- EXERCÍCIO 28 - Galeria de Imagens -->
+    <h2>Exercício 28 - Galeria de Imagens</h2>
+    <div>
+        <img id="imagemGaleria" src="https://via.placeholder.com/400x250" alt="Imagem da Galeria" width="400">
+    </div>
+    <br>
+    <button id="btnAnteriorImg">Anterior</button>
+    <button id="btnProximaImg">Próximo</button>
+
+    <script src="exercicios.js"></script>
+</body>
+</html>
